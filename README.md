@@ -1,5 +1,5 @@
 # TicTacToe
-Implementation of the tic-tac-toe game together with basic artificial intelligence
+Implementation of the tic-tac-toe game together with a basic artificial intelligence
 
 ![](imgs/TicTacToe.jpg)
 
