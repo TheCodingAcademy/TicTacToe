@@ -28,14 +28,14 @@ class TicTacToe:
 	def draw_circle(self, x, y):
 		radius = self.width / 100 * 8
 		pygame.draw.circle(self.screen, self.CIRCLE_COLOR, (self.width // 6 + self.width // 3 * y, self.width // 6 + self.width // 3 * x), radius, width=8)
-
+		pygame.display.update()
 
 	def draw_cross(self, x, y):
 		radius = self.width / 100 * 8
 		centre_pos = (self.width // 6 + self.width // 3 * y, self.width // 6 + self.width // 3 * x)
 		pygame.draw.line(self.screen, self.CROSS_COLOR, (centre_pos[0] - radius, centre_pos[1] - radius), (centre_pos[0] + radius, centre_pos[1] + radius), width=8)
 		pygame.draw.line(self.screen, self.CROSS_COLOR, (centre_pos[0] - radius, centre_pos[1] + radius), (centre_pos[0] + radius, centre_pos[1] - radius), width=8)
-
+		pygame.display.update()
 
 	def position_to_index(self, x, y):
 		return y // (self.width / 3), x // (self.width / 3)
