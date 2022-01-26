@@ -87,6 +87,13 @@ class TicTacToe:
 				pygame.display.set_caption("Game over - X won")
 				return True
 
+		for x in range(3):
+			for y in range(3):
+				if self.board_state[x, y] == 0:
+					is_there_free_cell = True
+		if (is_there_free_cell == False):
+			self.winner = "Drawn"
+			return True
 		else:
 			return False
 
