@@ -52,16 +52,6 @@ class TicTacToe:
 
 
 	def is_game_over(self):
-
-		is_there_free_cell = False
-		for x in range(3):
-			for y in range(3):
-				if self.board_state[x, y] == 0:
-					is_there_free_cell = True
-		if (is_there_free_cell == False):
-			pygame.display.set_caption("Drawn")
-			return True
-
 		
 		if(((self.board_state[0, 0] + self.board_state[0, 1] + self.board_state[0, 2]) == 3) or
 		   ((self.board_state[1, 0] + self.board_state[1, 1] + self.board_state[1, 2]) == 3) or
@@ -92,7 +82,7 @@ class TicTacToe:
 				if self.board_state[x, y] == 0:
 					is_there_free_cell = True
 		if (is_there_free_cell == False):
-			self.winner = "Drawn"
+			self.winner = "Draw"
 			return True
 		else:
 			return False
